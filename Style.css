@@ -1,0 +1,479 @@
+
+/* =========================
+   GENERAL RESET
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.7;
+    color: #17243a;
+    background: #ffffff;
+}
+
+.container {
+    width: 90%;
+    max-width: 1150px;
+    margin: auto;
+}
+
+/* =========================
+   HEADER AND NAVIGATION
+========================= */
+header {
+    background: #000000;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    min-height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* LOGO */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: none;
+    line-height: 1.2;
+}
+
+.logo img {
+    width: 150px;
+    height: 65px;
+    object-fit: contain;
+    display: block;
+}
+
+.logo span {
+    color: #ff8c00;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.logo small {
+    display: block;
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: #ffffff;
+    margin-top: 4px;
+}
+
+/* NAVIGATION LINKS */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+}
+
+.nav-links a:hover {
+    color: #ff8c00;
+}
+
+.nav-links .nav-btn {
+    background: #ff8c00;
+    color: #000000;
+    padding: 12px 20px;
+    border-radius: 6px;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+.hero {
+    background: linear-gradient(120deg, #000000, #292929);
+    color: white;
+    padding: 130px 0;
+}
+
+.hero-content {
+    max-width: 1150px;
+}
+
+.tagline,
+.section-label {
+    color: #ff8c00;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 13px;
+}
+
+.hero h1 {
+    font-size: clamp(38px, 6vw, 65px);
+    line-height: 1.15;
+    max-width: 850px;
+    margin: 22px 0;
+}
+
+.hero h1 span {
+    color: #ff8c00;
+}
+
+.hero-text {
+    color: #d0dced;
+    max-width: 650px;
+    font-size: 17px;
+    margin-bottom: 32px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    padding: 14px 24px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.primary-btn {
+    background: #ff8c00;
+    color: #000000;
+}
+
+.primary-btn:hover {
+    background: #e67800;
+}
+
+.secondary-btn {
+    border: 1px solid white;
+    color: white;
+}
+
+.secondary-btn:hover {
+    background: white;
+    color: black;
+}
+
+/* =========================
+   GENERAL SECTIONS
+========================= */
+.section {
+    padding: 90px 0;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 36px;
+    margin: 12px 0;
+}
+
+.section-intro {
+    margin-bottom: 40px;
+    color: #64748b;
+}
+
+.about p:last-child,
+.portfolio p:last-child,
+.contact p {
+    max-width: 750px;
+    margin: 15px auto;
+    color: #64748b;
+}
+
+/* =========================
+   SERVICES
+========================= */
+.services {
+    background: #f4f7fc;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.service-card {
+    background: white;
+    padding: 35px 25px;
+    border-radius: 12px;
+    text-align: left;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-7px);
+}
+
+.service-icon {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.service-card h3 {
+    font-size: 19px;
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    color: #64748b;
+    font-size: 14px;
+}
+
+/* =========================
+   PORTFOLIO SECTION
+========================= */
+.portfolio {
+    background: #ffffff;
+    padding: 90px 0;
+    text-align: center;
+}
+
+.portfolio-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.portfolio h2 {
+    font-size: 36px;
+    color: #000000;
+    margin: 12px 0;
+}
+
+.portfolio-intro {
+    color: #64748b;
+    margin: 15px auto 40px;
+    max-width: 750px;
+}
+
+/* PORTFOLIO FILTER BUTTONS */
+.portfolio-filters {
+    margin-bottom: 35px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.filter-btn {
+    padding: 11px 22px;
+    border: 1px solid #ff8c00;
+    background: #ffffff;
+    color: #000000;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: #ff8c00;
+    color: #000000;
+}
+
+/* PORTFOLIO GRID */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 30px;
+}
+
+/* PORTFOLIO CARDS */
+.portfolio-item {
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    text-align: left;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* PROJECT IMAGES */
+.portfolio-item img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    display: block;
+}
+
+/* PORTFOLIO INFORMATION */
+.portfolio-info {
+    padding: 22px;
+}
+
+.portfolio-info h3 {
+    color: #000000;
+    font-size: 19px;
+    margin-bottom: 10px;
+}
+
+.portfolio-info p {
+    color: #64748b;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+/* VIEW PROJECT BUTTON */
+.project-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: #ff8c00;
+    color: #000000;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.project-link:hover {
+    background: #000000;
+    color: #ffffff;
+}
+
+/* =========================
+   CONTACT SECTION
+========================= */
+.contact {
+    background: #f4f7fc;
+}
+
+.contact-details {
+    margin: 25px auto;
+}
+
+.contact-details p {
+    margin: 8px auto;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+    background: #000000;
+    color: white;
+    padding: 25px 0;
+    text-align: center;
+    font-size: 13px;
+}
+
+footer p {
+    color: #bdcce0;
+}
+
+/* =========================
+   MOBILE RESPONSIVENESS
+========================= */
+@media (max-width: 768px) {
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .logo img {
+        width: 55px;
+        height: 55px;
+    }
+
+    .logo span {
+        font-size: 19px;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background: #000000;
+        flex-direction: column;
+        padding: 25px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero {
+        padding: 85px 0;
+    }
+
+    .section {
+        padding: 65px 0;
+    }
+
+    .portfolio {
+        padding: 65px 0;
+    }
+
+    .section h2,
+    .portfolio h2 {
+        font-size: 29px;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .portfolio-item img {
+        height: 220px;
+    }
+
+    .filter-btn {
+        padding: 9px 14px;
+        font-size: 12px;
+    }
+}
